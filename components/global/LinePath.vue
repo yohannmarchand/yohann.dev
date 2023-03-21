@@ -1,23 +1,33 @@
 <template>
-  <div class="space-y-4">
-    <div>
+  <div class="relative">
+    <div class="space-y-10 flex flex-col items-center">
       <div
         v-for="i in count"
         :key="i"
         ref="dot"
-        class="h-3 w-3 bg-zinc-200 rounded-full transition-opacity"
+        class="h-4 w-4 bg-zinc-200 rounded-full transition-opacity"
         style="opacity: 0"
-        :style="{
-          marginLeft: getPosition(i),
-        }"
       />
     </div>
-    <div/>
+
+    <div
+      ref="parcour"
+      class="absolute inset-0 flex items-center transition-opacity"
+      :class="position === 'left' ? 'justify-end' : 'justify-start'"
+      style="opacity: 0"
+    >
+      <ParcourCard
+        :parcour="parcour"
+      />
+    </div>
   </div>
 </template>
 
 <script>
+import ParcourCard from "./ParcourCard.vue";
+
 export default {
+  components: {ParcourCard},
   props: {
     count: {
       type: Number,
@@ -27,7 +37,9 @@ export default {
     position: {
       type: String,
       default: 'left',
-    }
+    },
+
+    parcour: Object,
   },
 
   mounted() {
@@ -44,16 +56,23 @@ export default {
       });
     }, {threshold: 1})
 
-    dots.map(dot => observer.observe(dot))
+    observer.observe(this.$refs.parcour)
+
+    dots.map((dot, index) => {
+      observer.observe(dot)
+      dot.style.marginRight= this.getPosition(index)
+    })
+
+    window.addEventListener('resize', () => {
+      dots.map((dot, index) => dot.style.marginRight= this.getPosition(index))
+    })
   },
 
   methods: {
     getPosition(index) {
       const radius = this.count * 2
-
       const angle = (Math.PI / radius) * index
-
-      const x = index * radius * Math.cos(angle)
+      const x = index * radius * Math.cos(angle) * (window.screen.width / 100)
 
       if (this.position === 'left') {
         return x + 'px'
