@@ -12,10 +12,12 @@
     "core-js": "^3.25.3",
     "nuxt": "^2.15.8",
     "vue": "^2.7.10",
+    "vue-parallax-js": "^0.2.3",
     "vue-server-renderer": "^2.7.10",
     "vue-template-compiler": "^2.7.10"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^6.6.4"
+    "@nuxtjs/tailwindcss": "^6.6.4",
+    "@tailwindcss/aspect-ratio": "^0.4.2"
   }
 }

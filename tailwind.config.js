@@ -1,6 +1,8 @@
 export default {
   theme: {},
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/aspect-ratio'),
+  ],
   content: [
     `~/components/**/*.{vue,js,ts}`,
     `~/layouts/**/*.vue`,
