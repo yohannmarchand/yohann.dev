@@ -16,18 +16,13 @@
       :class="position === 'left' ? 'justify-end' : 'justify-start'"
       style="opacity: 0"
     >
-      <ParcourCard
-        :parcour="parcour"
-      />
     </div>
   </div>
 </template>
 
 <script>
-import ParcourCard from "./ParcourCard.vue";
 
 export default {
-  components: {ParcourCard},
   props: {
     count: {
       type: Number,
