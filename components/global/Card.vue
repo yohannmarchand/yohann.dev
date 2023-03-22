@@ -1,7 +1,7 @@
 <template>
   <div
     class="border overflow-auto border-blue-600 bg-zinc-200 rounded p-4 transition-all hover:scale-110"
-    :class="isOpen ? 'absolute top-0 left-0 w-full h-full z-50': 'cursor-pointer'"
+    :class="isOpen ? 'absolute top-4 left-0 w-full h-full z-50': 'cursor-pointer'"
   >
     <button
       v-if="isOpen"

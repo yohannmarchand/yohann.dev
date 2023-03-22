@@ -46,8 +46,7 @@
 
 
       <div class="mb-8 text-lg flex mt-1 space-x-1 md:mb-0 items-center">
-        <div class="bg-blue-600 md:w-3 w-16 h-3 rounded-full"/>
-        <div class="hidden bg-blue-600 md:block w-3 h-3 rounded-full"/>
+        <div class="bg-blue-600 md:w-3 w-16 h-4 rounded-full"/>
         <div class="ml-1">{{ startYear + index }}</div>
       </div>
     </div>

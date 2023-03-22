@@ -5,17 +5,16 @@
         v-for="i in count"
         :key="i"
         ref="dot"
-        class="h-4 w-4 bg-blue-500 rounded-full transition-opacity"
+        class="h-4 w-4 bg-blue-600 rounded-full transition-opacity"
         style="opacity: 0"
       />
     </div>
 
     <div
-      ref="parcour"
-      class="absolute inset-0 flex items-center transition-opacity"
+      class="absolute inset-0 flex items-center transition-opacity px-4 md:px-10"
       :class="position === 'left' ? 'justify-end' : 'justify-start'"
-      style="opacity: 0"
     >
+      TEST
     </div>
   </div>
 </template>
@@ -50,8 +49,6 @@ export default {
         }, 750)
       });
     }, {threshold: 1})
-
-    observer.observe(this.$refs.parcour)
 
     dots.map((dot, index) => {
       observer.observe(dot)

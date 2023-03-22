@@ -6,11 +6,11 @@
       class="group"
     >
       <div
-        class="rounded-full text-zinc-200 bg-blue-500"
+        class="rounded-full text-zinc-200 bg-blue-600"
       >
         <div class="flex items-center">
           <div class="grow p-4 text-lg">{{ techno.name }}</div>
-          <div class="p-2 w-16 h-16 rounded-full border border-blue-500 bg-zinc-200 md:p-4" v-html="techno.icon" />
+          <div class="p-2 w-16 h-16 rounded-full border border-blue-600 bg-zinc-200 md:p-4" v-html="techno.icon" />
         </div>
       </div>
     </div>
