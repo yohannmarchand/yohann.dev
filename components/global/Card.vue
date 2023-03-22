@@ -1,6 +1,6 @@
 <template>
   <div
-    class="border border-blue-600 bg-zinc-200 rounded p-4 transition-all hover:scale-110"
+    class="border overflow-auto border-blue-600 bg-zinc-200 rounded p-4 transition-all hover:scale-110"
     :class="isOpen ? 'absolute top-0 left-0 w-full h-full z-50': 'cursor-pointer'"
   >
     <button
@@ -13,7 +13,9 @@
       </svg>
     </button>
 
-    <div @click.stop="onClick">
+    <div
+      @click.stop="onClick"
+    >
       <div>{{ content.title }}</div>
       <div class="flex space-x-1 items-center">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
@@ -26,9 +28,8 @@
       <div
         v-if="isOpen"
         class="mt-4"
-      >
-        {{ content.description }}
-      </div>
+        v-html="content.description"
+      />
     </div>
   </div>
 </template>

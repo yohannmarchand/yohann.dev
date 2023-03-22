@@ -5,7 +5,7 @@
         v-for="i in count"
         :key="i"
         ref="dot"
-        class="h-4 w-4 bg-zinc-200 rounded-full transition-opacity"
+        class="h-4 w-4 bg-blue-500 rounded-full transition-opacity"
         style="opacity: 0"
       />
     </div>
@@ -67,7 +67,7 @@ export default {
     getPosition(index) {
       const radius = this.count * 2
       const angle = (Math.PI / radius) * index
-      const x = index * radius * Math.cos(angle) * (window.screen.width / 100)
+      const x = radius * Math.cos(angle) * (window.screen.width / 100)
 
       if (this.position === 'left') {
         return x + 'px'

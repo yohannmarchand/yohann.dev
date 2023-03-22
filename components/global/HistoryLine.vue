@@ -3,9 +3,10 @@
     <div
       v-for="index in yearsCount"
       :key="index"
+      class="flex flex-col-reverse md:flex-col"
     >
-      <div class="flex space-x-24">
-        <div class="bg-blue-600 w-3 rounded-full"/>
+      <div class="flex md:space-x-24">
+        <div class="hidden md:block bg-blue-600 w-3 rounded-full"/>
 
         <div class="grow flex space-x-12">
           <div class="relative grow">
@@ -17,7 +18,7 @@
 
             <div
               v-if="content[(startYear + index) - 1] && content[startYear + index].studies.title === content[(startYear + index) - 1].studies.title"
-              class="absolute top-full w-full"
+              class="hidden absolute top-full w-full md:block"
             >
               <div class="bg-blue-600 w-2 h-7 my-2 mx-auto rounded-full"/>
             </div>
@@ -35,7 +36,7 @@
 
             <div
               v-if="content[(startYear + index) - 1].job && content[startYear + index].job.title === content[(startYear + index) - 1].job.title"
-              class="absolute top-full w-full"
+              class="hidden absolute top-full w-full md:block"
             >
               <div class="bg-blue-600 w-2 h-7 my-2 mx-auto rounded-full"/>
             </div>
@@ -44,9 +45,9 @@
       </div>
 
 
-      <div class="text-lg flex mt-1 space-x-1 items-center">
-        <div class="bg-blue-600 w-3 h-3 rounded-full"/>
-        <div class="bg-blue-600 w-3 h-3 rounded-full"/>
+      <div class="mb-8 text-lg flex mt-1 space-x-1 md:mb-0 items-center">
+        <div class="bg-blue-600 md:w-3 w-16 h-3 rounded-full"/>
+        <div class="hidden bg-blue-600 md:block w-3 h-3 rounded-full"/>
         <div class="ml-1">{{ startYear + index }}</div>
       </div>
     </div>
@@ -141,7 +142,7 @@ export default {
     openCard(el) {
       this.$el.classList.add('relative')
 
-      el.parentElement.children[1]?.classList.add('hidden')
+      el.parentElement.children[1]?.classList.add('md:block')
       el.parentElement.classList.remove('relative')
     },
 
@@ -150,7 +151,7 @@ export default {
 
       console.log(el.parentElement)
 
-      el.parentElement.children[1]?.classList.remove('hidden')
+      el.parentElement.children[1]?.classList.remove('md:block')
       el.parentElement.classList.add('relative')
     }
   }
