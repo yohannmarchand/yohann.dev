@@ -1,6 +1,6 @@
 <template>
   <div class="text-zinc-900 aspect-w-9 aspect-h-16 h-auto md:aspect-w-16 md:aspect-h-9 w-full">
-    <video class="object-cover blur" autoplay muted loop id="myVideo">
+    <video class="object-cover" autoplay muted loop id="myVideo">
       <source src="https://storage.cloud.google.com/assets-yohann-dev/hero.mp4" type="video/mp4">
       Your browser does not support HTML5 video.
     </video>

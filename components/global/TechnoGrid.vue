@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
     <div
       v-for="techno in technos"
       :key="techno.name"
@@ -10,12 +10,8 @@
       >
         <div class="flex items-center">
           <div class="grow p-4 text-lg">{{ techno.name }}</div>
-          <div class="w-16 h-16 rounded-full border border-blue-500 bg-zinc-200 p-4" v-html="techno.icon" />
+          <div class="p-2 w-16 h-16 rounded-full border border-blue-500 bg-zinc-200 md:p-4" v-html="techno.icon" />
         </div>
-      </div>
-
-      <div class="hidden -mt-7 rounded-b text-zinc-200 bg-blue-500 px-3 pb-2 opacity-0">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet dolorem doloribus dolorum, esse et ipsum, labore, libero magni nesciunt nulla numquam perspiciatis porro possimus quidem rerum sint temporibus ut.
       </div>
     </div>
 
