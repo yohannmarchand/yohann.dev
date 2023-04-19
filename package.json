@@ -9,10 +9,11 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@tresjs/core": "^1.8.1",
     "core-js": "^3.25.3",
     "nuxt": "^2.15.8",
+    "three": "^0.151.3",
     "vue": "^2.7.10",
-    "vue-parallax-js": "^0.2.3",
     "vue-server-renderer": "^2.7.10",
     "vue-template-compiler": "^2.7.10"
   },

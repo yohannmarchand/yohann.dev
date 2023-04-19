@@ -1,14 +1,14 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'yohann.dev',
+    title: 'Yohann Marchand',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'Portfolio Yohann Marchand Developer Website' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
@@ -22,7 +22,6 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    "~/plugins/directives"
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

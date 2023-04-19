@@ -9,7 +9,7 @@
 
     <div class="inset-0 h-full flex flex-col space-y-8 items-center justify-center md:flex-row md:space-y-0 md:space-x-6">
       <div class="aspect-square">
-        <img class="drop-shadow-lg rounded-full w-72 h-72" src="~/assets/images/avatar.jpg">
+        <img class="drop-shadow-lg rounded-full w-72 h-72" src="~/assets/images/avatar.jpg" alt="Chicken run avatar">
       </div>
       <div class="text-blue-600">
         <h1
