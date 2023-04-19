@@ -14,7 +14,7 @@
       class="absolute inset-0 flex items-center transition-opacity px-4 md:px-10"
       :class="position === 'left' ? 'justify-end' : 'justify-start'"
     >
-<!--      TEST-->
+
     </div>
   </div>
 </template>
@@ -46,7 +46,7 @@ export default {
             entry.target.style.opacity = 1
           else
             entry.target.style.opacity = 0
-        }, 750)
+        }, 200)
       });
     }, {threshold: 1})
 
